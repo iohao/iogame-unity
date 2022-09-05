@@ -43,11 +43,12 @@ public class Socket : MonoBehaviour{
 
     public void OnOpen(object o, OpenEventArgs args){
         var loginVerify = new LoginVerify{
-            Age = 1,
-            Jwt = "HelloWorld"
+            Age = 273676,
+            Jwt = "luoyi",
+            LoginBizCode = 1
         };
         var myExternalMessage = new MyExternalMessage{
-            CmdMerge = CmdMgr.getMergeCmd(1, 0),
+            CmdMerge = CmdMgr.getMergeCmd(3, 1),
             DataContent = loginVerify.ToByteString(),
             ProtocolSwitch = 0,
             CmdCode = 1
@@ -62,10 +63,9 @@ public class Socket : MonoBehaviour{
     }
 
     public void OnMessage(object o, MessageEventArgs args){
-        //将字节数组转换为OnePerson对象
+        //将字节数组转换为
         IMessage message = new MyExternalMessage();
-        MyExternalMessage mySelf = new MyExternalMessage();
-        mySelf = (MyExternalMessage)message.Descriptor.Parser.ParseFrom(args.RawData);
+        var mySelf = (MyExternalMessage)message.Descriptor.Parser.ParseFrom(args.RawData);
         HandleMgr.packageHandler(mySelf.CmdMerge, mySelf.DataContent);
     }
 

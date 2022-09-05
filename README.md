@@ -14,5 +14,12 @@
 ## SpringBoot示例
 - 与 IoGame 跟在线文档不同的是 Entity 其他基本一致。
 - 在线文档示例 [https://www.yuque.com/iohao/game/zm6qg2](https://www.yuque.com/iohao/game/zm6qg2)
-- 个人示例
-- [https://gitee.com/licheng1013/io-game](https://gitee.com/licheng1013/io-game)
+
+## 示例
+### 官方示例
+- [https://gitee.com/iohao/iogame-example/tree/main/example-springboot/spring-game-logic-hall](https://gitee.com/iohao/iogame-example/tree/main/example-springboot/spring-game-logic-hall)
+
+### 个人示例
+- 与官方略有不同
+- ~~个人示例~~
+- ~~[https://gitee.com/licheng1013/io-game](https://gitee.com/licheng1013/io-game)~~

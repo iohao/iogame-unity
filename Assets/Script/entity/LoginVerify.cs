@@ -22,22 +22,18 @@ public static partial class LoginVerifyReflection {
   static LoginVerifyReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChFMb2dpblZlcmlmeS5wcm90byJLCgtMb2dpblZlcmlmeRIMCgRuYW1lGAEg",
-          "ASgJEgsKA2p3dBgCIAEoCRIUCgxsb2dpbkJpekNvZGUYAyABKAUSCwoDYWdl",
-          "GAQgASgFYgZwcm90bzM="));
+          "ChFMb2dpblZlcmlmeS5wcm90byI9CgtMb2dpblZlcmlmeRILCgNhZ2UYASAB",
+          "KAUSCwoDand0GAIgASgJEhQKDGxvZ2luQml6Q29kZRgDIAEoBWIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::LoginVerify), global::LoginVerify.Parser, new[]{ "Name", "Jwt", "LoginBizCode", "Age" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::LoginVerify), global::LoginVerify.Parser, new[]{ "Age", "Jwt", "LoginBizCode" }, null, null, null, null)
         }));
   }
   #endregion
 
 }
 #region Messages
-/// <summary>
-///登录验证
-/// </summary>
 public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
@@ -72,10 +68,9 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public LoginVerify(LoginVerify other) : this() {
-    name_ = other.name_;
+    age_ = other.age_;
     jwt_ = other.jwt_;
     loginBizCode_ = other.loginBizCode_;
-    age_ = other.age_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -85,21 +80,27 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
     return new LoginVerify(this);
   }
 
-  /// <summary>Field number for the "name" field.</summary>
-  public const int NameFieldNumber = 1;
-  private string name_ = "";
+  /// <summary>Field number for the "age" field.</summary>
+  public const int AgeFieldNumber = 1;
+  private int age_;
+  /// <summary>
+  ///* age 测试用的 
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public string Name {
-    get { return name_; }
+  public int Age {
+    get { return age_; }
     set {
-      name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      age_ = value;
     }
   }
 
   /// <summary>Field number for the "jwt" field.</summary>
   public const int JwtFieldNumber = 2;
   private string jwt_ = "";
+  /// <summary>
+  ///* jwt 
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public string Jwt {
@@ -113,7 +114,7 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
   public const int LoginBizCodeFieldNumber = 3;
   private int loginBizCode_;
   /// <summary>
-  /// 登录业务码
+  ///* 登录业务码 
   /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -121,18 +122,6 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
     get { return loginBizCode_; }
     set {
       loginBizCode_ = value;
-    }
-  }
-
-  /// <summary>Field number for the "age" field.</summary>
-  public const int AgeFieldNumber = 4;
-  private int age_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public int Age {
-    get { return age_; }
-    set {
-      age_ = value;
     }
   }
 
@@ -151,10 +140,9 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
     if (ReferenceEquals(other, this)) {
       return true;
     }
-    if (Name != other.Name) return false;
+    if (Age != other.Age) return false;
     if (Jwt != other.Jwt) return false;
     if (LoginBizCode != other.LoginBizCode) return false;
-    if (Age != other.Age) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -162,10 +150,9 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override int GetHashCode() {
     int hash = 1;
-    if (Name.Length != 0) hash ^= Name.GetHashCode();
+    if (Age != 0) hash ^= Age.GetHashCode();
     if (Jwt.Length != 0) hash ^= Jwt.GetHashCode();
     if (LoginBizCode != 0) hash ^= LoginBizCode.GetHashCode();
-    if (Age != 0) hash ^= Age.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -184,9 +171,9 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    if (Name.Length != 0) {
-      output.WriteRawTag(10);
-      output.WriteString(Name);
+    if (Age != 0) {
+      output.WriteRawTag(8);
+      output.WriteInt32(Age);
     }
     if (Jwt.Length != 0) {
       output.WriteRawTag(18);
@@ -195,10 +182,6 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
     if (LoginBizCode != 0) {
       output.WriteRawTag(24);
       output.WriteInt32(LoginBizCode);
-    }
-    if (Age != 0) {
-      output.WriteRawTag(32);
-      output.WriteInt32(Age);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -210,9 +193,9 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (Name.Length != 0) {
-      output.WriteRawTag(10);
-      output.WriteString(Name);
+    if (Age != 0) {
+      output.WriteRawTag(8);
+      output.WriteInt32(Age);
     }
     if (Jwt.Length != 0) {
       output.WriteRawTag(18);
@@ -221,10 +204,6 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
     if (LoginBizCode != 0) {
       output.WriteRawTag(24);
       output.WriteInt32(LoginBizCode);
-    }
-    if (Age != 0) {
-      output.WriteRawTag(32);
-      output.WriteInt32(Age);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -236,17 +215,14 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public int CalculateSize() {
     int size = 0;
-    if (Name.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+    if (Age != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Age);
     }
     if (Jwt.Length != 0) {
       size += 1 + pb::CodedOutputStream.ComputeStringSize(Jwt);
     }
     if (LoginBizCode != 0) {
       size += 1 + pb::CodedOutputStream.ComputeInt32Size(LoginBizCode);
-    }
-    if (Age != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Age);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -260,17 +236,14 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
     if (other == null) {
       return;
     }
-    if (other.Name.Length != 0) {
-      Name = other.Name;
+    if (other.Age != 0) {
+      Age = other.Age;
     }
     if (other.Jwt.Length != 0) {
       Jwt = other.Jwt;
     }
     if (other.LoginBizCode != 0) {
       LoginBizCode = other.LoginBizCode;
-    }
-    if (other.Age != 0) {
-      Age = other.Age;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -287,8 +260,8 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
         default:
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
-        case 10: {
-          Name = input.ReadString();
+        case 8: {
+          Age = input.ReadInt32();
           break;
         }
         case 18: {
@@ -297,10 +270,6 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
         }
         case 24: {
           LoginBizCode = input.ReadInt32();
-          break;
-        }
-        case 32: {
-          Age = input.ReadInt32();
           break;
         }
       }
@@ -318,8 +287,8 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
         default:
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
-        case 10: {
-          Name = input.ReadString();
+        case 8: {
+          Age = input.ReadInt32();
           break;
         }
         case 18: {
@@ -328,10 +297,6 @@ public sealed partial class LoginVerify : pb::IMessage<LoginVerify>
         }
         case 24: {
           LoginBizCode = input.ReadInt32();
-          break;
-        }
-        case 32: {
-          Age = input.ReadInt32();
           break;
         }
       }
