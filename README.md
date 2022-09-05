@@ -4,6 +4,10 @@
 - io-game-unity-demo 示例
 - 模型需要自己修改一下
 
+## Unity
+- unity版本
+- 2021.3.4f1c1 
+
 ## WebSocket
 - webScoket使用的: [https://github.com/psygames/UnityWebSocket](https://github.com/psygames/UnityWebSocket)
 
