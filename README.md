@@ -14,9 +14,6 @@
 
 - 在线文档示例 [https://www.yuque.com/iohao/game/zm6qg2](https://www.yuque.com/iohao/game/zm6qg2)
 
-## 示例
-### 官方示例
-- [https://gitee.com/iohao/iogame-example/tree/main/example-springboot/spring-game-logic-hall](https://gitee.com/iohao/iogame-example/tree/main/example-springboot/spring-game-logic-hall)
 
 ### 个人示例
 - 与官方略有不同
