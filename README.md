@@ -12,7 +12,7 @@
 
 ## SpringBoot示例
 
-- 在线文档示例 [https://www.yuque.com/iohao/game/zm6qg2](https://www.yuque.com/iohao/game/zm6qg2)
+- 在线文档示例 https://www.yuque.com/iohao/game/syv5mm
 
 
 ### 个人示例
