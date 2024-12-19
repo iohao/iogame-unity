@@ -1,5 +1,7 @@
 # iogame-unity
 
+在线文档 https://www.yuque.com/iohao/game/syv5mm
+
 ## 介绍
 - iogame-unity 示例
 
@@ -10,16 +12,6 @@
 ## WebSocket
 - webScoket使用的: [https://github.com/psygames/UnityWebSocket](https://github.com/psygames/UnityWebSocket)
 
-## SpringBoot示例
-
-- 在线文档示例 https://www.yuque.com/iohao/game/syv5mm
-
-
-### 个人示例
-- 与官方略有不同
-- ~~跟在线文档不同的是 Entity 其他基本一致。~~
-- ~~个人示例~~
-- ~~[https://gitee.com/licheng1013/io-game](https://gitee.com/licheng1013/io-game)~~
 
 
 ## Proto
